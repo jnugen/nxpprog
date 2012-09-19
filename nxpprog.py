@@ -66,6 +66,10 @@ flash_sector_lpc17xx = (
                         32, 32, 32, 32, 32, 32, 32,
                        )
 
+# flash sector sizes for lpc111x processors
+flash_sector_lpc111x = (
+                        4, 4, 4, 4, 4, 4, 4, 4
+                       )
 
 flash_prog_buffer_base_default = 0x40001000
 flash_prog_buffer_size_default = 4096
@@ -239,6 +243,16 @@ cpu_parms = {
 	    "flash_sector" : flash_sector_lpc17xx,
 	    "flash_prog_buffer_base" : 0x10000800,
 	    "devid": 0x25001118,
+	},
+	#
+	# lpc111x
+	#
+	"lpc1112fhn33/102" : {
+	    "flash_sector" : flash_sector_lpc111x,
+            "flash_sector_count": 4,
+	    "flash_prog_buffer_base" : 0x10000400,
+	    "flash_prog_buffer_size" : 512,
+	    "devid": 0x2524D02B,
 	},
 }
 
